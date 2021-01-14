@@ -3,9 +3,9 @@
 Identify motifs for CLIP peak clusters.
 
 # Usage
-1. Export this path `/storage/vannostrand/software/motif/venv/bin` to your `PATH`.
+1. Export this path `/storage/vannostrand/software/motif` to your `PATH`.
 ```shell script
-$ export PATH=/storage/vannostrand/software/motif/venv/bin:$PATH
+$ export PATH=/storage/vannostrand/software/motif:$PATH
 ```
 2. Check the usage:
 ```shell script
