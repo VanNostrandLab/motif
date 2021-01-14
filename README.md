@@ -22,7 +22,6 @@ positional arguments:
 
 optional arguments:
   -h, --help  show this help message and exit
-(/storage/vannostrand/software/motif/venv) [fy2@mhgcp-r01 motif]$ 
 ```
 
 3. Pass required arguments to `motif` to start motif identification.
