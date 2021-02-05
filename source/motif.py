@@ -36,13 +36,13 @@ def main():
         print('Annotated peak cluster file already exists, skip re-annotate.')
     else:
         print('Annotating peak clusters ...')
-        cmd = ['perl', ANNOTATE_PEAK, bed, args.SPECIES, annotated_bed]
+        cmd = [ANNOTATE_PEAK, bed, args.SPECIES, annotated_bed]
         p = subprocess.run(cmd, stdout=sys.stdout, stderr=sys.stdout, universal_newlines=True)
         if p.returncode:
             sys.exit(p.returncode)
 
     print('Pulling sequences for regions and running homer ...')
-    cmd = ['perl', RUN_HOMER, annotated_bed, args.SPECIES, args.UID]
+    cmd = [RUN_HOMER, annotated_bed, args.SPECIES, args.UID]
     p = subprocess.run(cmd, stdout=sys.stdout, stderr=sys.stdout, universal_newlines=True)
     if p.returncode:
         sys.exit(p.returncode)
