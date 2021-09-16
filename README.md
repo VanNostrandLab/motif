@@ -6,7 +6,7 @@ Identify motifs for CLIP peak clusters.
 1. On TACO cluster, directory call `/storage/vannostrand/software/motif/motif` 
 with one required parameter `annotated_peak_bed`, a path to a 10-column bed file 
 contains annotated peaks to identify motifs for peak clusters. In case you need 
-to fine tune the results, passed any of the 4 optional parameters (See check the 
+to fine tune the results, pass any of the 4 optional parameters (See check the 
 usage section below for details).
 
 
@@ -17,7 +17,7 @@ $ /storage/vannostrand/software/motif/motif
 Identify motifs for eCLIP peak clusters.
 
 Usage:
-motif.pl annotated_peak_bed [species] [outdir] [uid] [l10p] [l2fc]
+motif annotated_peak_bed [species] [outdir] [uid] [l10p] [l2fc] [processes]
     - annotated_peak_bed: 10-column bed file contains annotated peaks.
     - species: species name, e.g., hg19, hg38, ..., default: hg19.
     - outdir: path to output directory, default: current work directory.
@@ -25,11 +25,11 @@ motif.pl annotated_peak_bed [species] [outdir] [uid] [l10p] [l2fc]
            default: annotated_peak_bed file basename without .bed extension.
     - l10p: l10p cutoff, default: 3.
     - l2fc: l2fc cutoff, default: 3.
+    - processes: Number of processes to use, default: 1.
 ```
 
 ## Example
-1. Check annotated peak bed file
-Assume we have an annotated peak bed file: 
+1. Check annotated peak bed file. Assume we have an annotated peak bed file: 
 `/storage/vannostrand/analysis/20210908_Eric/DHX16_seCLIP/DHX16.F1.ip.peak.clusters.normalized.compressed.annotated.bed`, 
 which is a 10-column bed file contains annotated peaks:
 
@@ -45,7 +45,7 @@ chrM    2000    2013    400     5.82421124135645        +       noncoding_exon;E
 
 2. Call `motif` to identify motifs.
 Inside `/storage/vannostrand/analysis/20210908_Eric/DHX16_seCLIP`, we can call `motif` as follows to identify 
-motifs and save results to a current directory and dataset set to `DHX16.F1`:
+motifs and save results to a current directory (`$PWD`) and dataset set to `DHX16.F1`:
 ```shell
 $ /storage/vannostrand/software/motif/motif \
   DHX16.F1.ip.peak.clusters.normalized.compressed.annotated.bed \
