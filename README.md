@@ -6,8 +6,8 @@ Identify motifs for CLIP peak clusters.
 1. On TACO cluster, directory call `/storage/vannostrand/software/motif/motif` 
 with one required parameter `annotated_peak_bed`, a path to a 10-column bed file 
 contains annotated peaks to identify motifs for peak clusters. In case you need 
-to fine tune the results, pass any of the 4 optional parameters (See check the 
-usage section below for details).
+to fine tune the results, pass the 4 optional parameters in order (See check the 
+usage section below for details) to run the analysis.
 
 
 2. Check the usage:
